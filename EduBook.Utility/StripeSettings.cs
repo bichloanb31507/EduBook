@@ -2,7 +2,8 @@
 {
     public class StripeSettings
     {
-        public string SecretKey { get; set; }
-        public string PublishableKey { get; set; }
+        // cấu hình Stripe
+        public string? SecretKey { get; set; }
+        public string? PublishableKey { get; set; }
     }
 }

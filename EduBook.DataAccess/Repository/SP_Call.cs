@@ -6,7 +6,6 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EduBook.DataAccess.Repository
 {
-    // tạo class SP_Call kế thừa ISP_Call -> CRUD proc
     public class SP_Call : ISP_Call
     {
         private readonly ApplicationDbContext _db;

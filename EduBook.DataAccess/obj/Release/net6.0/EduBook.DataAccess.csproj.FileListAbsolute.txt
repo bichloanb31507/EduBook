@@ -1,0 +1,17 @@
+C:\Users\Admin\source\repos\EduBook\EduBook.DataAccess\bin\Release\net6.0\EduBook.DataAccess.deps.json
+C:\Users\Admin\source\repos\EduBook\EduBook.DataAccess\bin\Release\net6.0\EduBook.DataAccess.runtimeconfig.json
+C:\Users\Admin\source\repos\EduBook\EduBook.DataAccess\bin\Release\net6.0\EduBook.DataAccess.dll
+C:\Users\Admin\source\repos\EduBook\EduBook.DataAccess\bin\Release\net6.0\EduBook.DataAccess.pdb
+C:\Users\Admin\source\repos\EduBook\EduBook.DataAccess\bin\Release\net6.0\EduBook.Models.dll
+C:\Users\Admin\source\repos\EduBook\EduBook.DataAccess\bin\Release\net6.0\EduBook.Models.pdb
+C:\Users\Admin\source\repos\EduBook\EduBook.DataAccess\obj\Release\net6.0\EduBook.DataAccess.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\EduBook\EduBook.DataAccess\obj\Release\net6.0\EduBook.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\source\repos\EduBook\EduBook.DataAccess\obj\Release\net6.0\EduBook.DataAccess.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\EduBook\EduBook.DataAccess\obj\Release\net6.0\EduBook.DataAccess.AssemblyInfo.cs
+C:\Users\Admin\source\repos\EduBook\EduBook.DataAccess\obj\Release\net6.0\EduBook.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\EduBook\EduBook.DataAccess\obj\Release\net6.0\EduBook.DataAccess.csproj.CopyComplete
+C:\Users\Admin\source\repos\EduBook\EduBook.DataAccess\obj\Release\net6.0\EduBook.DataAccess.dll
+C:\Users\Admin\source\repos\EduBook\EduBook.DataAccess\obj\Release\net6.0\refint\EduBook.DataAccess.dll
+C:\Users\Admin\source\repos\EduBook\EduBook.DataAccess\obj\Release\net6.0\EduBook.DataAccess.pdb
+C:\Users\Admin\source\repos\EduBook\EduBook.DataAccess\obj\Release\net6.0\EduBook.DataAccess.genruntimeconfig.cache
+C:\Users\Admin\source\repos\EduBook\EduBook.DataAccess\obj\Release\net6.0\ref\EduBook.DataAccess.dll

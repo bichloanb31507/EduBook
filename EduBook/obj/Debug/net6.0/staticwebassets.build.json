@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5Zpd6IBL9o/rXwqZpfiqDdknq9I6jiIxoyQYzHlhkVo=",
+  "Hash": "KaZXYs8FCB9sQHZRLfstfL6YDigXcDhe8I0tfgWlUH0=",
   "Source": "EduBook",
   "BasePath": "_content/EduBook",
   "Mode": "Default",
@@ -1105,6 +1105,23 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\Admin\\source\\repos\\EduBook\\EduBook\\wwwroot\\images\\4830468.jpg",
+      "SourceId": "EduBook",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\EduBook\\EduBook\\wwwroot\\",
+      "BasePath": "_content/EduBook",
+      "RelativePath": "images/4830468.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\4830468.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Admin\\source\\repos\\EduBook\\EduBook\\wwwroot\\images\\lawn_leaf.jpg",
       "SourceId": "EduBook",
       "SourceType": "Discovered",
@@ -1207,6 +1224,23 @@
       "OriginalItemSpec": "wwwroot\\images\\products\\3805a245-c881-47d5-99c2-de39d48a546b.jpg"
     },
     {
+      "Identity": "C:\\Users\\Admin\\source\\repos\\EduBook\\EduBook\\wwwroot\\images\\products\\3c9df861-c230-4a4e-aa88-a625c193779f.jpg",
+      "SourceId": "EduBook",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\EduBook\\EduBook\\wwwroot\\",
+      "BasePath": "_content/EduBook",
+      "RelativePath": "images/products/3c9df861-c230-4a4e-aa88-a625c193779f.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\3c9df861-c230-4a4e-aa88-a625c193779f.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Admin\\source\\repos\\EduBook\\EduBook\\wwwroot\\images\\products\\4ae63c45-c673-42ac-afe5-69a9251815bd.png",
       "SourceId": "EduBook",
       "SourceType": "Discovered",
@@ -1239,6 +1273,57 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\products\\64fd4c07-c817-43c9-b9d1-b6918973c1f5.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Admin\\source\\repos\\EduBook\\EduBook\\wwwroot\\images\\products\\8a2b5888-6cb3-4be5-af44-8fe517105d16.jpg",
+      "SourceId": "EduBook",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\EduBook\\EduBook\\wwwroot\\",
+      "BasePath": "_content/EduBook",
+      "RelativePath": "images/products/8a2b5888-6cb3-4be5-af44-8fe517105d16.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\8a2b5888-6cb3-4be5-af44-8fe517105d16.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Admin\\source\\repos\\EduBook\\EduBook\\wwwroot\\images\\products\\9ad18eba-6f09-4b73-a2c9-e9904a92573b.jpg",
+      "SourceId": "EduBook",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\EduBook\\EduBook\\wwwroot\\",
+      "BasePath": "_content/EduBook",
+      "RelativePath": "images/products/9ad18eba-6f09-4b73-a2c9-e9904a92573b.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\9ad18eba-6f09-4b73-a2c9-e9904a92573b.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Admin\\source\\repos\\EduBook\\EduBook\\wwwroot\\images\\products\\a3f00836-860c-41a4-932f-8500b94eee81.webp",
+      "SourceId": "EduBook",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\EduBook\\EduBook\\wwwroot\\",
+      "BasePath": "_content/EduBook",
+      "RelativePath": "images/products/a3f00836-860c-41a4-932f-8500b94eee81.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\a3f00836-860c-41a4-932f-8500b94eee81.webp"
     },
     {
       "Identity": "C:\\Users\\Admin\\source\\repos\\EduBook\\EduBook\\wwwroot\\images\\products\\a5e29e15-448c-4224-bfe9-4d200162e192.png",
@@ -1343,6 +1428,23 @@
       "OriginalItemSpec": "wwwroot\\js\\covertype.js"
     },
     {
+      "Identity": "C:\\Users\\Admin\\source\\repos\\EduBook\\EduBook\\wwwroot\\js\\order.js",
+      "SourceId": "EduBook",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\EduBook\\EduBook\\wwwroot\\",
+      "BasePath": "_content/EduBook",
+      "RelativePath": "js/order.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\order.js"
+    },
+    {
       "Identity": "C:\\Users\\Admin\\source\\repos\\EduBook\\EduBook\\wwwroot\\js\\product.js",
       "SourceId": "EduBook",
       "SourceType": "Discovered",
@@ -1358,6 +1460,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\product.js"
+    },
+    {
+      "Identity": "C:\\Users\\Admin\\source\\repos\\EduBook\\EduBook\\wwwroot\\js\\qr.js",
+      "SourceId": "EduBook",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\EduBook\\EduBook\\wwwroot\\",
+      "BasePath": "_content/EduBook",
+      "RelativePath": "js/qr.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\qr.js"
     },
     {
       "Identity": "C:\\Users\\Admin\\source\\repos\\EduBook\\EduBook\\wwwroot\\js\\site.js",
@@ -1953,6 +2072,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\Admin\\source\\repos\\EduBook\\EduBook\\wwwroot\\lib\\qrcode.js",
+      "SourceId": "EduBook",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\EduBook\\EduBook\\wwwroot\\",
+      "BasePath": "_content/EduBook",
+      "RelativePath": "lib/qrcode.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\qrcode.js"
+    },
+    {
+      "Identity": "C:\\Users\\Admin\\source\\repos\\EduBook\\EduBook\\wwwroot\\lib\\qrcode.min.js",
+      "SourceId": "EduBook",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\EduBook\\EduBook\\wwwroot\\",
+      "BasePath": "_content/EduBook",
+      "RelativePath": "lib/qrcode.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\qrcode.min.js"
     }
   ]
 }

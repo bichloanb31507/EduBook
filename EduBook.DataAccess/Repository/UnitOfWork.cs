@@ -3,7 +3,6 @@ using EduBook.DataAccess.Repository.IRepository;
 
 namespace EduBook.DataAccess.Repository
 {
-    // tạo class UnitOfWork kế thừa IUnitOfWork
     public class UnitOfWork : IUnitOfWork
     {
         private readonly ApplicationDbContext _db;

@@ -97,6 +97,15 @@ namespace EduBook.Areas.Identity.Pages.Account
                 })
             };
 
+            if (User.IsInRole(SD.Role_Employee))
+            {
+                Input.Roles = _roleManager.Roles.Where(u => u.Name == SD.Role_User_Comp).Select(x => x.Name).Select(i => new SelectListItem
+                {
+                    Text = i,
+                    Value = i
+                });
+            }
+
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
         }
 

@@ -1,8 +1,7 @@
 ﻿namespace EduBook.Utility
 {
-    public static class SD
+    public static class SD // duyệt (không lỗi)
     {
-        // hằng số (proc, role, session, status)
         // proc
         public const string Proc_CoverType_Create = "usp_CreateCoverType";
         public const string Proc_CoverType_Get = "usp_GetCoverType";
@@ -14,16 +13,15 @@
         public const string Role_User_Comp = "Company Customer";
         public const string Role_Admin = "Admin";
         public const string Role_Employee = "Employee";
-        // session
         public const string ssShoppingCart = "Shopping Cart Session";
-        // status
+        // order status
         public const string StatusPending = "Pending";
         public const string StatusApproved = "Approved";
-        public const string StatusInProces = "Processing";
+        public const string StatusInProcess = "Processing";
         public const string StatusShipped = "Shipped";
         public const string StatusCancelled = "Cancelled";
-        public const string StatusRefund = "Refund";
-
+        public const string StatusRefunded = "Refunded";
+        // payment status
         public const string PaymentStatusPending = "Pending";
         public const string PaymentStatusApproved = "Approved";
         public const string PaymentStatusDelayedPayment = "ApprovedForDelayedPayment";

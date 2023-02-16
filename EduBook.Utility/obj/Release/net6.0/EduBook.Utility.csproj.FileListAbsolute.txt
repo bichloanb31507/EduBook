@@ -1,0 +1,12 @@
+C:\Users\Admin\source\repos\EduBook\EduBook.Utility\bin\Release\net6.0\EduBook.Utility.deps.json
+C:\Users\Admin\source\repos\EduBook\EduBook.Utility\bin\Release\net6.0\EduBook.Utility.dll
+C:\Users\Admin\source\repos\EduBook\EduBook.Utility\bin\Release\net6.0\EduBook.Utility.pdb
+C:\Users\Admin\source\repos\EduBook\EduBook.Utility\obj\Release\net6.0\EduBook.Utility.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\EduBook\EduBook.Utility\obj\Release\net6.0\EduBook.Utility.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\source\repos\EduBook\EduBook.Utility\obj\Release\net6.0\EduBook.Utility.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\EduBook\EduBook.Utility\obj\Release\net6.0\EduBook.Utility.AssemblyInfo.cs
+C:\Users\Admin\source\repos\EduBook\EduBook.Utility\obj\Release\net6.0\EduBook.Utility.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\EduBook\EduBook.Utility\obj\Release\net6.0\EduBook.Utility.dll
+C:\Users\Admin\source\repos\EduBook\EduBook.Utility\obj\Release\net6.0\refint\EduBook.Utility.dll
+C:\Users\Admin\source\repos\EduBook\EduBook.Utility\obj\Release\net6.0\EduBook.Utility.pdb
+C:\Users\Admin\source\repos\EduBook\EduBook.Utility\obj\Release\net6.0\ref\EduBook.Utility.dll

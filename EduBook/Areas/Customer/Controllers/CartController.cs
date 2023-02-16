@@ -1,15 +1,18 @@
-﻿using EduBook.DataAccess.Repository.IRepository;
+﻿using System.Security.Claims;
+using System.Text;
+using System.Text.Encodings.Web;
+using EduBook.DataAccess.Repository.IRepository;
+using EduBook.Models;
 using EduBook.Models.ViewModels;
 using EduBook.Utility;
-using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
-using System.Security.Claims;
 using Microsoft.AspNetCore.WebUtilities;
-using System.Text.Encodings.Web;
-using System.Text;
-using EduBook.Models;
+using Microsoft.Extensions.Options;
 using Stripe;
+using Twilio;
+using Twilio.Rest.Api.V2010.Account;
 
 namespace EduBook.Areas.Customer.Controllers
 {
@@ -18,24 +21,33 @@ namespace EduBook.Areas.Customer.Controllers
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IEmailSender _emailSender;
+
+        private TwilioSettings _twilioOptions { get; set; }
         private readonly UserManager<IdentityUser> _userManager;
 
         [BindProperty]
         public ShoppingCartVM ShoppingCartVM { get; set; }
 
-        public CartController(IUnitOfWork unitOfWork, IEmailSender emailSender, UserManager<IdentityUser> userManager)
+        public CartController(IUnitOfWork unitOfWork, IEmailSender emailSender,
+            UserManager<IdentityUser> userManager, IOptions<TwilioSettings> twilionOptions)
         {
             _unitOfWork = unitOfWork;
             _emailSender = emailSender;
             _userManager = userManager;
+            _twilioOptions = twilionOptions.Value;
         }
 
         public IActionResult Index()
         {
-            // kiểm tra người dùng đã đăng nhập hay chưa
             var claimsIdentity = (ClaimsIdentity)User.Identity;
             var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
-            // lấy giỏ hàng của người dùng
+
+            if (claim == null)
+            {
+                ShoppingCartVM = new ShoppingCartVM();
+                return View(ShoppingCartVM);
+            }
+
             ShoppingCartVM = new ShoppingCartVM()
             {
                 OrderHeader = new Models.OrderHeader(),
@@ -88,7 +100,9 @@ namespace EduBook.Areas.Customer.Controllers
 
             ModelState.AddModelError(string.Empty, "Verification email sent. Please check your email.");
             return RedirectToAction("Index");
+
         }
+
 
         public IActionResult Plus(int cartId)
         {
@@ -146,10 +160,13 @@ namespace EduBook.Areas.Customer.Controllers
             ShoppingCartVM = new ShoppingCartVM()
             {
                 OrderHeader = new Models.OrderHeader(),
-                ListCart = _unitOfWork.ShoppingCart.GetAll(c => c.ApplicationUserId == claim.Value, includeProperties: "Product")
+                ListCart = _unitOfWork.ShoppingCart.GetAll(c => c.ApplicationUserId == claim.Value,
+                                                            includeProperties: "Product")
             };
 
-            ShoppingCartVM.OrderHeader.ApplicationUser = _unitOfWork.ApplicationUser.GetFirstOrDefault(c => c.Id == claim.Value, includeProperties: "Company");
+            ShoppingCartVM.OrderHeader.ApplicationUser = _unitOfWork.ApplicationUser
+                                                            .GetFirstOrDefault(c => c.Id == claim.Value,
+                                                                includeProperties: "Company");
 
             foreach (var list in ShoppingCartVM.ListCart)
             {
@@ -172,16 +189,16 @@ namespace EduBook.Areas.Customer.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult SummaryPost(string stripeToken)
         {
-            // kiểm tra người dùng đã đăng nhập hay chưa
             var claimsIdentity = (ClaimsIdentity)User.Identity;
             var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
-            // gán trị mặc định ban đầu của một đơn hàng
-            ShoppingCartVM.OrderHeader.Carrier = "*";
-            ShoppingCartVM.OrderHeader.Name = "*";
-            ShoppingCartVM.OrderHeader.TrackingNumber = "*";
-            ShoppingCartVM.OrderHeader.TransactionId = "*";
-            ShoppingCartVM.OrderHeader.ApplicationUser = _unitOfWork.ApplicationUser.GetFirstOrDefault(c => c.Id == claim.Value, includeProperties: "Company");
-            ShoppingCartVM.ListCart = _unitOfWork.ShoppingCart.GetAll(c => c.ApplicationUserId == claim.Value, includeProperties: "Product");
+            ShoppingCartVM.OrderHeader.ApplicationUser = _unitOfWork.ApplicationUser
+                                                            .GetFirstOrDefault(c => c.Id == claim.Value,
+                                                                    includeProperties: "Company");
+
+            ShoppingCartVM.ListCart = _unitOfWork.ShoppingCart
+                                        .GetAll(c => c.ApplicationUserId == claim.Value,
+                                        includeProperties: "Product");
+
             ShoppingCartVM.OrderHeader.PaymentStatus = SD.PaymentStatusPending;
             ShoppingCartVM.OrderHeader.OrderStatus = SD.StatusPending;
             ShoppingCartVM.OrderHeader.ApplicationUserId = claim.Value;
@@ -189,13 +206,11 @@ namespace EduBook.Areas.Customer.Controllers
 
             _unitOfWork.OrderHeader.Add(ShoppingCartVM.OrderHeader);
             _unitOfWork.Save();
-            // xử lý chi tiết đơn hàng
-            List<OrderDetails> orderDetailsList = new List<OrderDetails>();
-            foreach(var item in ShoppingCartVM.ListCart)
+
+            foreach (var item in ShoppingCartVM.ListCart)
             {
-                // lấy giá của sản phẩm
-                item.Price = SD.GetPriceBasedOnQuantity(item.Count, item.Product.Price, item.Product.Price50, item.Product.Price100);
-                // lưu chi tiết từng sản phảm vào OrderDetails
+                item.Price = SD.GetPriceBasedOnQuantity(item.Count, item.Product.Price,
+                    item.Product.Price50, item.Product.Price100);
                 OrderDetails orderDetails = new OrderDetails()
                 {
                     ProductId = item.ProductId,
@@ -203,26 +218,25 @@ namespace EduBook.Areas.Customer.Controllers
                     Price = item.Price,
                     Count = item.Count
                 };
-                // tính toán giá trị cuối cùng của đơn hàng
                 ShoppingCartVM.OrderHeader.OrderTotal += orderDetails.Count * orderDetails.Price;
                 _unitOfWork.OrderDetails.Add(orderDetails);
-                //_unitOfWork.Save();
+
             }
-            // đưa giỏ hàng về giá trị 0 và xoá giỏ hàng
+
             _unitOfWork.ShoppingCart.RemoveRange(ShoppingCartVM.ListCart);
             _unitOfWork.Save();
             HttpContext.Session.SetInt32(SD.ssShoppingCart, 0);
 
             if (stripeToken == null)
             {
-                // đối với công ty uỷ quyền chúng ta sẽ delay thanh toán
+                // order will be created for delayed payment for authroized company
                 ShoppingCartVM.OrderHeader.PaymentDueDate = DateTime.Now.AddDays(30);
                 ShoppingCartVM.OrderHeader.PaymentStatus = SD.PaymentStatusDelayedPayment;
                 ShoppingCartVM.OrderHeader.OrderStatus = SD.StatusApproved;
             }
             else
             {
-                // xử lý thanh toán với Stripe
+                // xử lý thanh toán
                 var options = new ChargeCreateOptions
                 {
                     Amount = Convert.ToInt32(ShoppingCartVM.OrderHeader.OrderTotal * 100),
@@ -230,19 +244,16 @@ namespace EduBook.Areas.Customer.Controllers
                     Description = "Order ID : " + ShoppingCartVM.OrderHeader.Id,
                     Source = stripeToken
                 };
-
                 var service = new ChargeService();
                 Charge charge = service.Create(options);
-
-                if (charge.BalanceTransactionId == null)
+                if (charge.Id == null)
                 {
                     ShoppingCartVM.OrderHeader.PaymentStatus = SD.PaymentStatusRejected;
-                }    
+                }
                 else
                 {
-                    ShoppingCartVM.OrderHeader.TransactionId = charge.BalanceTransactionId;
-                }    
-
+                    ShoppingCartVM.OrderHeader.TransactionId = charge.Id;
+                }
                 if (charge.Status.ToLower() == "succeeded")
                 {
                     ShoppingCartVM.OrderHeader.PaymentStatus = SD.PaymentStatusApproved;
@@ -250,14 +261,25 @@ namespace EduBook.Areas.Customer.Controllers
                     ShoppingCartVM.OrderHeader.PaymentDate = DateTime.Now;
                 }
             }
-
             _unitOfWork.Save();
-
             return RedirectToAction("OrderConfirmation", "Cart", new { id = ShoppingCartVM.OrderHeader.Id });
         }
 
         public IActionResult OrderConfirmation(int id)
         {
+            OrderHeader orderHeader = _unitOfWork.OrderHeader.GetFirstOrDefault(u => u.Id == id);
+            TwilioClient.Init(_twilioOptions.AccountSID, _twilioOptions.AuthToken);
+            try
+            {
+                var message = MessageResource.Create(
+                    body: "Order Placed on Edu Book. Your Order ID:" + id,
+                    from: new Twilio.Types.PhoneNumber(_twilioOptions.PhoneNumber),
+                    to: new Twilio.Types.PhoneNumber(orderHeader.PhoneNumber)
+                    );
+            }
+            catch (Exception ex)
+            {
+            }
             return View(id);
         }
     }

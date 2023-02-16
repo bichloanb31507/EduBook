@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EduBook.Models
 {
-    // tạo class ApplicationUser kế thừa IdentityUser
+    // tạo class ApplicationUser
     public class ApplicationUser : IdentityUser
     {
         [Required]

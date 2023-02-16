@@ -570,3 +570,4 @@ C:\Users\Admin\source\repos\EduBook\EduBook\bin\Debug\net6.0\refs\System.Xml.XPa
 C:\Users\Admin\source\repos\EduBook\EduBook\bin\Debug\net6.0\refs\System.Xml.XPath.XDocument.dll
 C:\Users\Admin\source\repos\EduBook\EduBook\bin\Debug\net6.0\refs\WindowsBase.dll
 C:\Users\Admin\source\repos\EduBook\EduBook\obj\Debug\net6.0\ref\EduBook.dll
+C:\Users\Admin\source\repos\EduBook\EduBook\bin\Debug\net6.0\Stripe.net.dll

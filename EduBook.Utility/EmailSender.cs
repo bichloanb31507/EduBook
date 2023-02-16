@@ -5,7 +5,8 @@ using MimeKit;
 namespace EduBook.Utility
 {
     public class EmailSender : IEmailSender
-    {   
+    {
+        // gửi mail dựa vào mật khẩu ứng dụng
         public Task SendEmailAsync(string email, string subject, string htmlMessage)
         {
             var emailToSend = new MimeMessage();

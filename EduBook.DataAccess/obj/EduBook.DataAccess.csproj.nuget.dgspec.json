@@ -81,6 +81,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.12, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[41.6.0, )"
             }
           },
           "imports": [
@@ -158,6 +162,10 @@
             "Microsoft.Extensions.Identity.Stores": {
               "target": "Package",
               "version": "[6.0.0, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[41.6.0, )"
             }
           },
           "imports": [

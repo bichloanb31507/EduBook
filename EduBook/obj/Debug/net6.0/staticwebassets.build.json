@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OSppSKD7Y1tTAJ4b1LqzGsMX66IP0JSdytJFwi6hNkU=",
+  "Hash": "5Zpd6IBL9o/rXwqZpfiqDdknq9I6jiIxoyQYzHlhkVo=",
   "Source": "EduBook",
   "BasePath": "_content/EduBook",
   "Mode": "Default",
@@ -1105,6 +1105,23 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\Admin\\source\\repos\\EduBook\\EduBook\\wwwroot\\images\\lawn_leaf.jpg",
+      "SourceId": "EduBook",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\EduBook\\EduBook\\wwwroot\\",
+      "BasePath": "_content/EduBook",
+      "RelativePath": "images/lawn_leaf.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\lawn_leaf.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Admin\\source\\repos\\EduBook\\EduBook\\wwwroot\\images\\products\\13584d9d-143e-43c7-95f3-d69ea1336558.png",
       "SourceId": "EduBook",
       "SourceType": "Discovered",
@@ -1190,6 +1207,23 @@
       "OriginalItemSpec": "wwwroot\\images\\products\\3805a245-c881-47d5-99c2-de39d48a546b.jpg"
     },
     {
+      "Identity": "C:\\Users\\Admin\\source\\repos\\EduBook\\EduBook\\wwwroot\\images\\products\\4ae63c45-c673-42ac-afe5-69a9251815bd.png",
+      "SourceId": "EduBook",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\EduBook\\EduBook\\wwwroot\\",
+      "BasePath": "_content/EduBook",
+      "RelativePath": "images/products/4ae63c45-c673-42ac-afe5-69a9251815bd.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\4ae63c45-c673-42ac-afe5-69a9251815bd.png"
+    },
+    {
       "Identity": "C:\\Users\\Admin\\source\\repos\\EduBook\\EduBook\\wwwroot\\images\\products\\64fd4c07-c817-43c9-b9d1-b6918973c1f5.jpg",
       "SourceId": "EduBook",
       "SourceType": "Discovered",
@@ -1239,6 +1273,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\products\\c0321977-d162-476b-b5d9-6af84bfe9f1e.png"
+    },
+    {
+      "Identity": "C:\\Users\\Admin\\source\\repos\\EduBook\\EduBook\\wwwroot\\images\\products\\f750f900-970a-47ec-a5dc-a2c0380a0e5e.png",
+      "SourceId": "EduBook",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\EduBook\\EduBook\\wwwroot\\",
+      "BasePath": "_content/EduBook",
+      "RelativePath": "images/products/f750f900-970a-47ec-a5dc-a2c0380a0e5e.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\f750f900-970a-47ec-a5dc-a2c0380a0e5e.png"
     },
     {
       "Identity": "C:\\Users\\Admin\\source\\repos\\EduBook\\EduBook\\wwwroot\\js\\category.js",

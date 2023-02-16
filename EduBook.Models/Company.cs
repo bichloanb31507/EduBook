@@ -2,6 +2,7 @@
 
 namespace EduBook.Models
 {
+    // tạo class Company
     public class Company
     {
         // khóa chính Id

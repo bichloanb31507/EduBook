@@ -4,12 +4,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EduBook.DataAccess.Data
 {
+    // tạo class ApplicationDbContext kế thừa IdentityDbContext
     public class ApplicationDbContext : IdentityDbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
         }
 
+        // tạo table dựa vào class
         public DbSet<Category>? Categories { get; set; }
         public DbSet<CoverType>? CoverTypes { get; set; }
         public DbSet<Product>? Products { get; set; }

@@ -2,6 +2,7 @@
 
 namespace EduBook.Models
 {
+    // tạo class Cover Type
     public class CoverType
     {
         // khoá chính Id

@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EduBook.DataAccess.Repository
 {
+    // tạo class SP_Call kế thừa ISP_Call -> CRUD proc
     public class SP_Call : ISP_Call
     {
         private readonly ApplicationDbContext _db;
@@ -16,6 +17,7 @@ namespace EduBook.DataAccess.Repository
             _db = db;
             ConnectionString = db.Database.GetDbConnection().ConnectionString;
         }
+
         public void Dispose()
         {
             _db.Dispose();

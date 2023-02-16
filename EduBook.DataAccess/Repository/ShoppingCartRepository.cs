@@ -4,6 +4,7 @@ using EduBook.Models;
 
 namespace EduBook.DataAccess.Repository
 {
+    // tạo class ShoppingCartRepository
     public class ShoppingCartRepository : Repository<ShoppingCart>, IShoppingCartRepository
     {
         private readonly ApplicationDbContext _db;

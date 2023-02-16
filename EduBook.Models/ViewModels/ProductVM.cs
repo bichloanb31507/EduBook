@@ -2,6 +2,7 @@
 
 namespace EduBook.Models.ViewModels
 {
+    // tạo class trung gian ProductVM
     public class ProductVM
     {
         public Product? Product { get; set; }

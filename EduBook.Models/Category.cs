@@ -2,6 +2,7 @@
 
 namespace EduBook.Models
 {
+    // tạo class Category
     public class Category
     {
         // khoá chính Id
